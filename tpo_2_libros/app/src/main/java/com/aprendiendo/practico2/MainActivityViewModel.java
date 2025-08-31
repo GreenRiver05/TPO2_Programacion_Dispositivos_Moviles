@@ -19,10 +19,10 @@ import java.util.List;
 public class MainActivityViewModel extends AndroidViewModel {
 
     private List<Libro> listaLibros = Arrays.asList(
-            new Libro("El hobbit", "1234", "J.R.R Tolkien", "Mundo", "Una obra fundacional de la fantasía moderna, El Hobbit narra la transformación de Bilbo Bolsón, un hobbit apacible y hogareño, en un héroe inesperado. Invitado por el mago Gandalf a unirse a trece enanos liderados por Thorin Escudo de Roble, Bilbo se embarca en una travesía hacia la Montaña Solitaria para recuperar un tesoro custodiado por el dragón Smaug..", "Fantasia", 1937, 300),
-            new Libro("El dia que Nietsche lloró", "5678", "Louis Vilton", "Campana", "Una novela filosófica y psicológica que imagina un encuentro ficticio entre el filósofo Friedrich Nietzsche y el médico vienés Josef Breuer, precursor del psicoanálisis. Ambientada en Viena en 1882, la historia comienza cuando Lou Salomé convence a Breuer de tratar a Nietzsche, quien atraviesa una profunda crisis emocional.", "Drama", 2005, 302),
-            new Libro("Despierta", "1234", "Anthony De Melo", "Mundo", "Situada en el año 2060, esta novela distópica presenta un mundo donde casi toda interacción humana ocurre en línea. Maddie Freeman, hija del creador de la Escuela Digital, vive bajo estricta vigilancia y control tecnológico. Su vida da un giro cuando conoce a Justin, un joven que defiende la conexión humana real y rechaza la vida virtual.", "Autoayuda", 2010, 100),
-            new Libro("Un Mundo Feliz", "9123", "Aldous Houxley", "Banana", "Una de las distopías más influyentes del siglo XX, esta novela presenta una sociedad futurista donde la estabilidad se logra mediante la manipulación genética, el condicionamiento psicológico y el consumo de una droga llamada soma. Los individuos son creados en laboratorios y divididos en castas (Alfas, Betas, Gammas, Deltas y Epsilones).", "Ciencia ficción", 2013, 235));
+            new Libro("El hobbit", "1234", "J.R.R Tolkien", "Mundo", "Una obra fundacional de la fantasía moderna, El Hobbit narra la transformación de Bilbo Bolsón, un hobbit apacible y hogareño, en un héroe inesperado. Invitado por el mago Gandalf a unirse a trece enanos liderados por Thorin Escudo de Roble, Bilbo se embarca en una travesía hacia la Montaña Solitaria para recuperar un tesoro custodiado por el dragón Smaug..", "Fantasia", 1937, 300, R.drawable.el_hobbit,"#C2431F", "#000000"),
+            new Libro("El dia que Nietsche lloró", "5678", "Louis Vilton", "Campana", "Una novela filosófica y psicológica que imagina un encuentro ficticio entre el filósofo Friedrich Nietzsche y el médico vienés Josef Breuer, precursor del psicoanálisis. Ambientada en Viena en 1882, la historia comienza cuando Lou Salomé convence a Breuer de tratar a Nietzsche, quien atraviesa una profunda crisis emocional.", "Drama", 2005, 302,R.drawable.nietsche,"#312112", "#FFFFFF"),
+            new Libro("Despierta", "1234", "Anthony De Melo", "Mundo", "Situada en el año 2060, esta novela distópica presenta un mundo donde casi toda interacción humana ocurre en línea. Maddie Freeman, hija del creador de la Escuela Digital, vive bajo estricta vigilancia y control tecnológico. Su vida da un giro cuando conoce a Justin, un joven que defiende la conexión humana real y rechaza la vida virtual.", "Autoayuda", 2010, 100, R.drawable.despierta,"#EAE4C0", "#000000" ),
+            new Libro("Un Mundo Feliz", "9123", "Aldous Houxley", "Banana", "Una de las distopías más influyentes del siglo XX, esta novela presenta una sociedad futurista donde la estabilidad se logra mediante la manipulación genética, el condicionamiento psicológico y el consumo de una droga llamada soma. Los individuos son creados en laboratorios y divididos en castas (Alfas, Betas, Gammas, Deltas y Epsilones).", "Ciencia ficción", 2013, 235, R.drawable.un_mundo_feliz, "#315B62", "#FFFFFF"));
 
     private MutableLiveData<String> mutableError;
 
@@ -48,7 +48,7 @@ public class MainActivityViewModel extends AndroidViewModel {
             if (libro.getTitulo().equalsIgnoreCase(titulo)) {
                 aux++;
                 Intent intent = new Intent(getApplication(), LibroActivity.class);
-                intent.putExtra("libro", (Serializable) libro);
+                intent.putExtra("libro", libro);
                 intent.setFlags(FLAG_ACTIVITY_NEW_TASK);
                 getApplication().startActivity(intent);
             }

@@ -5,15 +5,69 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DE8FC5C7"
+    android:background="#ACACAC"
     tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/ulp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTpo2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:text="TPO N° 2"
+        android:textAlignment="center"
+        android:textColor="#1D4985"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="Becerra Diaz Gabriel Ezequiel"
+        android:textAlignment="center"
+        android:textColor="#1D4985"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTpo2" />
+
+    <TextView
+        android:id="@+id/tvBiblioteca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biblioteca"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#1D4985"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32999998" />
 
     <EditText
         android:id="@+id/etTitulo"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="Titulo"
@@ -22,13 +76,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBiblioteca" />
 
     <Button
         android:id="@+id/btBuscar"
         android:layout_width="wrap_content"
         android:layout_height="52dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Buscar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,97 +99,81 @@
         android:textColor="#570303"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btBuscar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btBuscar" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/ivLibros"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/gatito"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Libro"
-                android:textAlignment="center"
-                android:textSize="40sp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/books" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
-        android:text="Recomendaciones:"
-        android:textColor="#040000"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Recomendaciones de Busqueda:"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#1D4985"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twError" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="-El dia que Nietzsche lloro"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="#1D4985"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twError" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="-Un mundo Feliz"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="#1D4985"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="-Despierta"
-        android:textColor="#040000"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="#1D4985"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="-El hobbit"
-        android:textColor="#040000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="#1D4985"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

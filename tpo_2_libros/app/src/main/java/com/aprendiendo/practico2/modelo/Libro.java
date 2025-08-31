@@ -12,8 +12,11 @@ public class Libro implements Serializable {
     private String  etiqueta;
     private int anio;
     private int paginas;
+    private int imagen;
+    private String colorFondo;
+    private String colorTexto;
 
-    public Libro(String titulo, String ISNB, String autor, String editorial, String descripcion, String etiqueta, int anio, int paginas) {
+    public Libro(String titulo, String ISNB, String autor, String editorial, String descripcion, String etiqueta, int anio, int paginas, int imagen, String colorFondo, String colorTexto) {
         this.titulo = titulo;
         this.ISNB = ISNB;
         this.autor = autor;
@@ -22,6 +25,9 @@ public class Libro implements Serializable {
         this.etiqueta = etiqueta;
         this.anio = anio;
         this.paginas = paginas;
+        this.imagen = imagen;
+        this.colorFondo = colorFondo;
+        this.colorTexto = colorTexto;
     }
 
     public String getTitulo() {
@@ -86,5 +92,29 @@ public class Libro implements Serializable {
 
     public void setPaginas(int paginas) {
         this.paginas = paginas;
+    }
+
+    public int getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(int imagen) {
+        this.imagen = imagen;
+    }
+
+    public String getColorFondo() {
+        return colorFondo;
+    }
+
+    public void setColorFondo(String colorFondo) {
+        this.colorFondo = colorFondo;
+    }
+
+    public String getColorTexto() {
+        return colorTexto;
+    }
+
+    public void setColorTexto(String colorTexto) {
+        this.colorTexto = colorTexto;
     }
 }
