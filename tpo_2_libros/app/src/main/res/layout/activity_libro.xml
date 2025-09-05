@@ -163,5 +163,19 @@
         app:layout_constraintStart_toEndOf="@+id/cvPortada"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+    <ImageButton
+        android:id="@+id/ibRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Botón guardar"
+        android:src="@drawable/regresar"
+        app:layout_constraintBottom_toTopOf="@+id/tvEditorialISBN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

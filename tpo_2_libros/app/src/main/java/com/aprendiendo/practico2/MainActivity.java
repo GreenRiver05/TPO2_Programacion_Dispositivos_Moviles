@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 String titulo = binding.etTitulo.getText().toString();
                 binding.twError.setText("");
                 vm.buscarLibro(titulo);
-
             }
         });
 
